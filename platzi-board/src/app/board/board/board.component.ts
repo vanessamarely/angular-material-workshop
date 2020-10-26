@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CardSchema, ListSchema } from './../../core/models';
+import { ListSchema } from './../../core/models';
 import { ApiService } from './../../core/services';
 
 
