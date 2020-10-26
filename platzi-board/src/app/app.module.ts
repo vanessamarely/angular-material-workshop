@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -17,6 +17,7 @@ import { HomeModule } from "./home/home.module";
   ],
   imports: [
     BrowserModule,
+    HammerModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
