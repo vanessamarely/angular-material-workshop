@@ -1,7 +1,8 @@
-import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, NgZone, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CardSchema } from './../../core/models';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
+import { CdkConnectedOverlay } from '@angular/cdk/overlay';
 import { take } from 'rxjs/operators';
 
 @Component({
@@ -11,6 +12,7 @@ import { take } from 'rxjs/operators';
 })
 export class FormTaskComponent implements OnInit {
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
+  @Input() connectedOverlay: CdkConnectedOverlay;
   addTask: FormGroup;
   selectedPriority: string;
 
@@ -37,7 +39,7 @@ export class FormTaskComponent implements OnInit {
 
   onFormAdd(form: CardSchema): void {
     if (this.addTask.valid) {
-      
+      this.close();
     }
   }
 
@@ -45,6 +47,10 @@ export class FormTaskComponent implements OnInit {
     // Wait for changes to be applied, then trigger textarea resize.
     this._ngZone.onStable.pipe(take(1))
         .subscribe(() => this.autosize.resizeToFitContent(true));
+  }
+
+  close(): void {
+    this.connectedOverlay.overlayRef.detach();
   }
 
 }

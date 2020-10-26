@@ -10,4 +10,15 @@
 		<app-task *ngFor="let card of list.cards" [card]="card" cdkDrag></app-task>
 	</div>
 </div>
-<app-form-task></app-form-task>
+
+<ng-template
+  #connectedOverlay="cdkConnectedOverlay"
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOpen]="isOverlayDisplayed"
+  [cdkConnectedOverlayHasBackdrop]="overlayOptions.hasBackdrop"
+	[cdkConnectedOverlayPositions]="overlayOptions.positions"
+	(backdropClick)="hideOverlay()"
+  (detach)="hideOverlay()"
+	>
+  <app-form-task [connectedOverlay]="connectedOverlay"></app-form-task>
+</ng-template>
