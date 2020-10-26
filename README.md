@@ -28,4 +28,7 @@ Me gusta ayudar en las comunidades, dar charlas, dar mentorías y compartir mi c
 - [Overlay](components-cdk.md#Overlay).
 - [Platform](components-cdk.md#Platform).
 - [Portal](components-cdk.md#Portal).
+- [Scrolling](components-cdk.md#Scrolling).
+- [Stepper](components-cdk.md#Stepper).
+- [Table](components-cdk.md#Table).
 

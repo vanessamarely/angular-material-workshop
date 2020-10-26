@@ -105,3 +105,36 @@ En la guía puedes encontrar mas sobre los tipos de Portal que podemos implement
 [https://material.angular.io/cdk/portal/overview](https://material.angular.io/cdk/portal/overview)
 
 
+## Scrolling
+
+Es una directiva para manejar el evento del scroll.
+
+El paquete de scrolling proporciona helpers para las directivas que reaccionan a los eventos de scroll.
+
+En la guía encontraras como implementar la directiva y algunos ejemplos de su implementación.
+
+[https://material.angular.io/cdk/scrolling/overview](https://material.angular.io/cdk/scrolling/overview)
+
+## Stepper
+
+Presenta contenido como pasos a través de los cuales podemos progresar.
+
+El stepper de CDK proporciona una base sobre la que se pueden construir más variedades de steppers. Es un paso a paso, en un flujo de trabajo similar a un asistente que divide el contenido en pasos lógicos.
+
+En la guia se encuentra el detalle de su implementación y ejemplos para usarlo.
+
+[https://material.angular.io/cdk/stepper/overview](https://material.angular.io/cdk/stepper/overview)
+
+
+## Table
+
+Table o Tabla en español, es un componente configurable de datos tabulados.
+
+Es una tabla de datos personalizable y sin comentarios con una API completamente basada en plantillas, columnas dinámicas y una estructura DOM accesible. Este componente actúa como el núcleo sobre el que cualquiera puede construir su propia experiencia de tabla de datos personalizada.
+
+En la documentación encontraremos como podemos implementarla.
+
+[https://material.angular.io/cdk/table/overview](https://material.angular.io/cdk/table/overview)
+
+
+
