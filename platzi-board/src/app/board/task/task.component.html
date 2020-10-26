@@ -13,6 +13,9 @@
     <button  matTooltip="Editar tarea" matTooltipClass="custom-tooltip-blue" matTooltipPosition="above" mat-icon-button cdkOverlayOrigin (click)="displayOverlay()" #trigger="cdkOverlayOrigin">
       <mat-icon aria-label="icon-button to edit">edit</mat-icon>
     </button>
+    <button  matTooltip="Eliminar tarea" matTooltipPosition="above" mat-icon-button (click)="removeTask(card.id)">
+      <mat-icon aria-label="icon-button to remove">delete</mat-icon>
+    </button>
   </div>
   <p class="card__date"><strong>Fecha de finalización:</strong> {{ card.date | date }}</p>
   <p class="card__description">{{card.description}}</p>

@@ -31,4 +31,8 @@ export class TaskComponent implements OnInit {
     this.isOverlayDisplayed = false;
   }
 
+  removeTask(cardId: string): void {
+    console.log('Eliminar tarea');
+  }
+
 }
