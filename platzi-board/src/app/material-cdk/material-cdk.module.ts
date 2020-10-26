@@ -8,7 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
+ 
 //CDK
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -24,6 +25,7 @@ import { TextFieldModule } from '@angular/cdk/text-field';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatTooltipModule,
     //cdk
     DragDropModule,
     OverlayModule,
@@ -36,6 +38,7 @@ import { TextFieldModule } from '@angular/cdk/text-field';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatTooltipModule,
     //cdk
     DragDropModule,
     OverlayModule,
