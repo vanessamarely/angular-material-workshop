@@ -41,4 +41,6 @@ La aplicación la encontraras en el folder platzi-board 👍
 - [Arquitectura en Angular](architecture.md)
   - [Arquitectura Modular](architecture.md#Arquitectura%Modular)
 - [Style Guide](architecture.md#Style%Guide)
+- [SPA - Single Page Aplication](spa.md)
+- [Schematics](schematics.md)
 
