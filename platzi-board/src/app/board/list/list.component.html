@@ -4,6 +4,6 @@
 >
 	<h3 class="list__title"><strong>{{list.name}}</strong></h3>
 	<div class="list__cards">
-		<app-card *ngFor="let card of list.cards" [card]="card"></app-card>
+		<app-task *ngFor="let card of list.cards" [card]="card"></app-task>
 	</div>
 </div>
