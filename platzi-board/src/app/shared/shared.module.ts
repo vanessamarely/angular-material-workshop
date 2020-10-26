@@ -13,6 +13,10 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     CommonModule,
     MaterialCdkModule
-  ]
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent
+  ],
 })
 export class SharedModule { }
