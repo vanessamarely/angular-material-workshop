@@ -11,6 +11,8 @@ import { MatSelectModule } from '@angular/material/select';
 
 //CDK
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { TextFieldModule } from '@angular/cdk/text-field';
 
 @NgModule({
   declarations: [],
@@ -24,6 +26,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatSelectModule,
     //cdk
     DragDropModule,
+    OverlayModule,
+    TextFieldModule,
   ],
   exports: [
     MatToolbarModule,
@@ -34,6 +38,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatSelectModule,
     //cdk
     DragDropModule,
+    OverlayModule,
+    TextFieldModule
   ]
 })
 export class MaterialCdkModule { }

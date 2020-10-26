@@ -29,6 +29,10 @@
       <textarea
         matInput
         formControlName="description"
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="5"
       >
       </textarea>
       <mat-error>
