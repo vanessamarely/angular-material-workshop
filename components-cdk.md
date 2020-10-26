@@ -136,5 +136,41 @@ En la documentación encontraremos como podemos implementarla.
 
 [https://material.angular.io/cdk/table/overview](https://material.angular.io/cdk/table/overview)
 
+## Harnesses
+
+Base para componentes de prueba de harnesses (Arnés, gancho).
+
+Un harnesses de componentes es una clase que permite que una prueba interactúe con un componente a través de una API compatible. La API de cada harnesses interactúa con un componente de la misma manera que lo haría un usuario. Al utilizar la API de harnesses, una prueba se aísla contra las actualizaciones de los componentes internos, como cambiar su estructura DOM. La idea de los componentes harnesses proviene del patrón PageObject comúnmente utilizado para las pruebas de integración.
+
+@angular/cdk/testing contiene infraestructura para crear y usar harnesses de prueba de componentes. Se puede crear harnesses de prueba para cualquier componente, desde pequeños widgets reutilizables hasta páginas de aplicaciones completas.
+
+Se puede hacer uso del harnesses, siguiendo la documentación.
+
+[https://material.angular.io/cdk/test-harnesses/overview](https://material.angular.io/cdk/test-harnesses/overview)
+
+## TextField
+
+Es una utilidad para trabajar con campos de texto.
+
+El paquete de campo de texto proporciona utilidades útiles para trabajar con campos de entrada de texto como <input> y <textarea>.
+
+Se puede ver parte de esas utilidades para estos campos en la documentación.
+
+[https://material.angular.io/cdk/text-field/overview](https://material.angular.io/cdk/text-field/overview)
+
+## Tree
+
+El Tree, presenta contenido jerárquico como un árbol expandible.
+
+Permite crear una experiencia de árbol personalizada para datos estructurados. 
+
+Proporciona una base para construir otras características como el filtrado en la parte superior del árbol. 
+
+Hay dos tipos de árboles: árbol plano y árbol anidado. Las estructuras DOM son diferentes para estos dos tipos de árboles.
+
+Se pueden ver ejemplos de los dos tipos de árbol en la documentación.
+
+[https://material.angular.io/cdk/tree/overview](https://material.angular.io/cdk/tree/overview)
+
 
 

@@ -31,4 +31,7 @@ Me gusta ayudar en las comunidades, dar charlas, dar mentorías y compartir mi c
 - [Scrolling](components-cdk.md#Scrolling).
 - [Stepper](components-cdk.md#Stepper).
 - [Table](components-cdk.md#Table).
+- [Harnesses](components-cdk.md#Harnesses).
+- [TextField](components-cdk.md#TextField).
+- [Tree](components-cdk.md#Tree).
 
