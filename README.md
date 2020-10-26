@@ -25,4 +25,7 @@ Me gusta ayudar en las comunidades, dar charlas, dar mentorías y compartir mi c
 - [Drag&Drop](components-cdk.md#Drag&Drop).
 - [Layout](components-cdk.md#Layout).
 - [Observers](components-cdk.md#Observers).
+- [Overlay](components-cdk.md#Overlay).
+- [Platform](components-cdk.md#Platform).
+- [Portal](components-cdk.md#Portal).
 

@@ -70,3 +70,38 @@ En la guía podemos ver como podemos implementar un Observer para estar pendient
 
 [https://material.angular.io/cdk/observers/overview](https://material.angular.io/cdk/observers/overview)
 
+## Overlay
+
+Es una utilidad para mostrar contenido flotante dinámico.
+
+El paquete de Overlay proporciona una forma de abrir paneles flotantes en la pantalla.
+
+En la guía puedes encontrar la forma básica en la que podemos hacer uso de este componente, incluso se menciona en el caso de que no estés usando Angular Material, que debes tener en cuenta en la configuración.
+
+[https://material.angular.io/cdk/overlay/overview](https://material.angular.io/cdk/overlay/overview)
+
+## Platform
+
+Provee información sobre la plataforma del usuario.
+
+Es un  conjunto de utilidades que recopilan información sobre la plataforma actual y las diferentes funciones que admite.
+
+En la guía puedes encontrar como podemos usar platform para identificar la plataforma que esta usando el usuario.
+
+[https://material.angular.io/cdk/platform/overview](https://material.angular.io/cdk/platform/overview)
+
+## Portal
+
+Es una utilidad para mostrar contenido dinámico en un objetivo específico (puede ser otro componente).
+
+Proporciona un sistema flexible para convertir contenido dinámico en una aplicación.
+
+Un portal es una parte de la interfaz de usuario que se puede representar dinámicamente en un espacio abierto en la página.
+
+La "parte de la interfaz de usuario" puede ser un componente, un TemplateRef o un elemento DOM y la "ranura abierta" es un PortalOutlet.
+
+En la guía puedes encontrar mas sobre los tipos de Portal que podemos implementar.
+
+[https://material.angular.io/cdk/portal/overview](https://material.angular.io/cdk/portal/overview)
+
+
