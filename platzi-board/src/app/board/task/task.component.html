@@ -1,0 +1,14 @@
+<div 
+  class="card"
+  id="card_{{card.id}}"
+  [ngClass]="{'card--urgent': card.priority === 'urgent', 'card--moderate': card.priority === 'moderate', 'card--low': card.priority === 'low'}"
+  >
+  <div class="card__icon">
+    <mat-icon aria-hidden="false" aria-label="urgent icon" *ngIf="card.priority === 'urgent'">alarm</mat-icon>
+    <mat-icon aria-hidden="false" aria-label="medium icon" *ngIf="card.priority === 'moderate'">autorenew</mat-icon>
+    <mat-icon aria-hidden="false" aria-label="medium icon" *ngIf="card.priority === 'low'">assignment_returned</mat-icon>
+  </div>
+  <h3 class="card__title">Tarea</h3>
+  <p class="card__date"><strong>Fecha de finalización:</strong> {{ card.date | date }}</p>
+  <p class="card__description">{{card.description}}</p>
+</div>
