@@ -8,7 +8,7 @@ Un patrón de diseño, es una forma reutilizable de resolver un problema común.
 
 Un servicio de Angular usa  el decorador @Injectable(), que quiere decir que cualquier Componente, Servicio, Directiva o Pipe puede usar este «Injectable» sin preocuparse de crearlo o destruirlo, y que Angular se encarga de «inyectarle» el Servicio para ser usado por quien lo necesite. El elemento que necesite hacer uso del servicio lo usara, sin problema.
 
-```ts
+```typescript
 import { Injectable } from '@angular/core';
 
 @Injectable()
