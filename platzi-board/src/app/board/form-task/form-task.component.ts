@@ -13,9 +13,11 @@ import { take } from 'rxjs/operators';
 export class FormTaskComponent implements OnInit {
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
   @Input() connectedOverlay: CdkConnectedOverlay;
+  @Input() card?: CardSchema;
+
   addTask: FormGroup;
   selectedPriority: string;
-
+  formText: string;
   priorities: any[] = [
     {value: 'urgent', viewValue: 'Urgente'},
     {value: 'moderate', viewValue: 'Moderado'},
@@ -26,7 +28,13 @@ export class FormTaskComponent implements OnInit {
 
   ngOnInit(): void {
     this.setForm();
+    this.formText = 'Crear';
     this.selectedPriority = '';
+    if(this.card){
+      this.setValuesOnForm(this.card);
+      this.formText = 'Editar';
+      this.selectedPriority = this.card.priority;
+    }
   }
 
   setForm(): void {
@@ -38,9 +46,21 @@ export class FormTaskComponent implements OnInit {
   }
 
   onFormAdd(form: CardSchema): void {
-    if (this.addTask.valid) {
+    if (this.addTask.valid  && !this.card) {
+      console.log('creada');
+      this.close();
+    } else {
+      console.log('editada');
       this.close();
     }
+  }
+
+  setValuesOnForm(form: CardSchema): void {
+    this.addTask.setValue({
+      date: new Date(form.date),
+      priority: form.priority,
+      description: form.description 
+   });
   }
 
   triggerResize() {
