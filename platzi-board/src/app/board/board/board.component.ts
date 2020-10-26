@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CardSchema, ListSchema } from './../../core/models';
+import { ApiService } from './../../core/services';
+
 
 @Component({
   selector: 'app-board',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
-
-  constructor() { }
+  lists: ListSchema[];
+  
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.getDataList();
+  }
+
+  getDataList(): void {
+    /* Data from Api */
+    this.apiService.getApi()
+      .subscribe(
+        response => this.lists = response['list'],
+        error => (console.log('Ups! we have an error: ', error))
+    );
   }
 
 }

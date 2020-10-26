@@ -1,0 +1,25 @@
+{ "list": [
+  {
+    "id": "1",
+    "name": "Qué hacer?",
+    "cards": [
+      {
+        "id": "1",
+        "description": "Tarea 1", 
+        "date": "10/26/20",
+        "priority": "urgent"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "¡En progreso!",
+    "cards": []
+  },
+  {
+    "id": "3",
+    "name": "¡Está hecho!",
+    "cards": []
+  }
+]
+}

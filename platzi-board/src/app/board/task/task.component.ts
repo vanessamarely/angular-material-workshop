@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CardSchema } from "./../../core/models";
 
 @Component({
   selector: 'app-task',
@@ -6,17 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent implements OnInit {
-  card: any =
-  {
-    id: "1",
-    description: "Tarea 1", 
-    date: "10/26/20",
-    priority: "urgent"
-  };
-  
+  @Input() card: CardSchema;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.card)
   }
 
 }
