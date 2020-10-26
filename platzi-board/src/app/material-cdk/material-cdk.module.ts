@@ -9,7 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
- 
+import { MatDialogModule } from '@angular/material/dialog';
+
 //CDK
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -26,6 +27,7 @@ import { PortalModule } from '@angular/cdk/portal';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    MatDialogModule,
     //cdk
     DragDropModule,
     OverlayModule,
@@ -40,6 +42,7 @@ import { PortalModule } from '@angular/cdk/portal';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    MatDialogModule,
     //cdk
     DragDropModule,
     OverlayModule,

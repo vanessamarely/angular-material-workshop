@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CardSchema } from "./../../core/models";
 import { CdkConnectedOverlay } from '@angular/cdk/overlay';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../../shared/components/modal/modal.component';
 
 @Component({
   selector: 'app-task',
@@ -18,7 +20,7 @@ export class TaskComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -32,7 +34,10 @@ export class TaskComponent implements OnInit {
   }
 
   removeTask(cardId: string): void {
-    console.log('Eliminar tarea');
+    const dialogRef = this.dialog.open(ModalComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Eliminar tarea');
+    });
   }
 
 }
