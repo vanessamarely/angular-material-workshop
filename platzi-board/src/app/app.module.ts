@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CoreModule } from "./core/core.module";
 import { SharedModule } from "./shared/shared.module";
+import { BoardModule } from "./board/board.module";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SharedModule } from "./shared/shared.module";
     BrowserAnimationsModule,
     CoreModule,
     SharedModule,
+    BoardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
