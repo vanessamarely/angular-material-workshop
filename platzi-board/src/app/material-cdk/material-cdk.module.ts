@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 
 //CDK
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -28,6 +29,7 @@ import { PortalModule } from '@angular/cdk/portal';
     MatSelectModule,
     MatTooltipModule,
     MatDialogModule,
+    MatCardModule,
     //cdk
     DragDropModule,
     OverlayModule,
@@ -43,6 +45,7 @@ import { PortalModule } from '@angular/cdk/portal';
     MatSelectModule,
     MatTooltipModule,
     MatDialogModule,
+    MatCardModule,
     //cdk
     DragDropModule,
     OverlayModule,
