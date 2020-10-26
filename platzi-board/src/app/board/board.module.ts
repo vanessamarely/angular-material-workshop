@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BoardRoutingModule } from './board-routing.module';
 import { SharedModule } from './../shared/shared.module';
@@ -16,7 +17,9 @@ import { FormTaskComponent } from './form-task/form-task.component';
     CommonModule,
     BoardRoutingModule,
     SharedModule,
-    MaterialCdkModule
+    MaterialCdkModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class BoardModule { }

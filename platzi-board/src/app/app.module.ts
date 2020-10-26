@@ -23,7 +23,7 @@ import { HomeModule } from "./home/home.module";
     SharedModule,
     BoardModule,
     HomeModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

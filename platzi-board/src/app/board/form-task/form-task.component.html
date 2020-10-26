@@ -1,1 +1,41 @@
-<p>form-task works!</p>
+<form class="form" [formGroup]="addTask" (ngSubmit)="onFormAdd(addTask.value)" novalidate> 
+  <header class="form__header">
+      <h3 class="form__header__title">Añadir Tarea</h3>
+  </header>
+  <section class="form__fields"> 
+    <mat-form-field class="form__fields__item" appearance="fill">
+      <mat-label>Fecha</mat-label>
+      <input type="date"  matInput placeholder="Fecha" value="" formControlName="priority">
+      <mat-error>
+        Fecha es <strong>requerida</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form__fields__item" appearance="fill">
+      <mat-label>Seleccione una prioridad</mat-label>
+      <select matNativeControl [(ngModel)]="selectedPriority" name="priority" formControlName="priority">
+        <option value="" selected></option>
+        <option *ngFor="let priority of priorities" [value]="priority.value">
+          {{priority.viewValue}}
+        </option>
+      </select>
+      <mat-error>
+        Prioridad es <strong>requerida</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form__fields__item" appearance="fill" color="primary">
+      <mat-label>Descripción</mat-label>
+      <textarea
+        matInput
+        formControlName="description"
+      >
+      </textarea>
+      <mat-error>
+        Descripcion es <strong>requerida</strong>
+      </mat-error>
+    </mat-form-field>
+    
+    <button class="form__fields__button" mat-raised-button color="primary" [disabled]="!addTask.valid">Crear</button>
+  </section>
+</form> 
