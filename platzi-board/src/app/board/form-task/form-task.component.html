@@ -1,1 +1,29 @@
-<p>form-task works!</p>
+<form class="form" novalidate> 
+  <header>
+      <h3>Añadir Tarea</h3>
+  </header>
+  <section> 
+    <mat-form-field class="form__fields__item" appearance="fill">
+      <mat-label>Fecha</mat-label>
+      <input type="date"  matInput placeholder="Fecha" value="" formControlName="priority">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Seleccione una prioridad</mat-label>
+      <select matNativeControl name="priority" formControlName="priority">
+        <option value="" selected></option>
+      </select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" color="primary">
+      <mat-label>Descripción</mat-label>
+      <textarea
+        matInput
+        formControlName="description"
+        >
+      </textarea>
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary">Crear</button>
+  </section>
+</form> 
