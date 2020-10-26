@@ -22,4 +22,7 @@ Me gusta ayudar en las comunidades, dar charlas, dar mentorías y compartir mi c
 - [Componentes de CDK](components-cdk.md).
 - [Bidireccionalidad](components-cdk.md#Bidireccionalidad).
 - [Clipboard](components-cdk.md#Clipboard).
+- [Drag&Drop](components-cdk.md#Drag&Drop).
+- [Layout](components-cdk.md#Layout).
+- [Observers](components-cdk.md#Observers).
 

@@ -39,3 +39,34 @@ La directiva se puede utilizar para agregar fácilmente la funcionalidad de copi
 En la guía nos menciona como podemos hacer uso de este helper fácilmente.
 
 [https://material.angular.io/cdk/clipboard/overview](https://material.angular.io/cdk/clipboard/overview)
+
+## Drag&Drop
+
+Es una directiva que habilita la interacción del Drag & Drop.
+
+Proporciona una manera de crear fácil y declarativamente interfaces de arrastrar y soltar, con soporte para arrastrar libremente, ordenar dentro de una lista, transferir elementos entre listas, animaciones, dispositivos táctiles, arrastre personalizado identificadores, vistas previas y marcadores de posición, además de listas horizontales y bloqueo a lo largo de un eje.
+
+En la guía podemos ver ejemplos de implementaciones para diferentes drag&drop.
+
+[https://material.angular.io/cdk/drag-drop/overview](https://material.angular.io/cdk/drag-drop/overview)
+
+## Layout
+
+Es una utilidad que responde a los cambios del tamaño del viewport.
+
+Proporciona utilidades para crear interfaces de usuario receptivas que reaccionan a los cambios de tamaño de la pantalla.
+
+En la guía podemos ver como podemos hacer uso de los breakpoints propuestos, de acuerdo a los deferentes cambios en la pantalla.
+
+[https://material.angular.io/cdk/layout/overview](https://material.angular.io/cdk/layout/overview)
+
+## Observers
+
+Es una utilidad que responde a cambios de propiedades de elementos.
+
+El paquete de observadores proporciona directivas, creadas sobre los observadores de la plataforma Web nativa, como MutationObserver.
+
+En la guía podemos ver como podemos implementar un Observer para estar pendientes de los cambios del Host.
+
+[https://material.angular.io/cdk/observers/overview](https://material.angular.io/cdk/observers/overview)
+
