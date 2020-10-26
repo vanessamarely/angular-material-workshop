@@ -42,5 +42,6 @@ La aplicación la encontraras en el folder platzi-board 👍
   - [Arquitectura Modular](architecture.md#Arquitectura%Modular)
 - [Style Guide](architecture.md#Style%Guide)
 - [SPA - Single Page Aplication](spa.md)
+- [Router](routing.md)
 - [Schematics](schematics.md)
 
