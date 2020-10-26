@@ -20,4 +20,6 @@ Me gusta ayudar en las comunidades, dar charlas, dar mentorías y compartir mi c
 
 - [Introduccion a CDK](cdk.md).
 - [Componentes de CDK](components-cdk.md).
+- [Bidireccionalidad](components-cdk.md#Bidireccionalidad).
+- [Clipboard](components-cdk.md#Clipboard).
 
