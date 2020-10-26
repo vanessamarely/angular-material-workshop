@@ -14,7 +14,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { TextFieldModule } from '@angular/cdk/text-field';
-
+import { PortalModule } from '@angular/cdk/portal';
 @NgModule({
   declarations: [],
   imports: [
@@ -30,6 +30,7 @@ import { TextFieldModule } from '@angular/cdk/text-field';
     DragDropModule,
     OverlayModule,
     TextFieldModule,
+    PortalModule,
   ],
   exports: [
     MatToolbarModule,
@@ -42,7 +43,8 @@ import { TextFieldModule } from '@angular/cdk/text-field';
     //cdk
     DragDropModule,
     OverlayModule,
-    TextFieldModule
+    TextFieldModule,
+    PortalModule
   ]
 })
 export class MaterialCdkModule { }
