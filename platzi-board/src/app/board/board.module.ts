@@ -8,9 +8,10 @@ import { MaterialCdkModule } from './../material-cdk/material-cdk.module';
 import { BoardComponent } from './board/board.component';
 import { ListComponent } from './list/list.component';
 import { TaskComponent } from './task/task.component';
+import { FormTaskComponent } from './form-task/form-task.component';
 
 @NgModule({
-  declarations: [BoardComponent, ListComponent, TaskComponent],
+  declarations: [BoardComponent, ListComponent, TaskComponent, FormTaskComponent],
   imports: [
     CommonModule,
     BoardRoutingModule,
