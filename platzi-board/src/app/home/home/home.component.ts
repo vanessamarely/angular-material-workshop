@@ -11,10 +11,9 @@ export class HomeComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.getPrioritiesTask();
   }
   
-  getPrioritiesTask(): void {
+  getPrioritiesTask(PriorityType: string): void {
     this.apiService.getApi()
       .subscribe(
         response => {
@@ -22,7 +21,7 @@ export class HomeComponent implements OnInit {
           let cards = [];
           lists.map(element => {
             element.cards.map(card => {
-              if(card.priority == 'urgent'){
+              if(card.priority == PriorityType){
                 cards.push(card)
               }
             });

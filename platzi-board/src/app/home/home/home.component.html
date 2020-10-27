@@ -2,13 +2,18 @@
   <h1 class="home__title">Platzi - Tablero</h1>
   <p>En nuestro día a día siempre tenemos que realizar diferentes tipos de tareas y priorizarlas y dejarlas por escrito nos ayuda a abordarlas mucho más rápido y lograr su realización</p>
   <p>Por ello en este tablero te invitamos a organizar tu día a día</p>
-  <section>
-    <h2>Lista de tareas</h2>
-    <div class="home__card-list">
-      <mat-card class="home__card-list__card" *ngFor="let card of cardList">
-        <mat-card-header>
-          <mat-card-title>
-            <div class="card__card-list__icon">
+  <section class="home__card-list">
+    <h2 class="home__card-list__title">Lista de tareas</h2>
+    <div class="home__card-list__buttons">
+      <button class="option-button" mat-button mat-raised-button (click)="getPrioritiesTask('urgent')"> <mat-icon aria-hidden="false" aria-label="urgent icon">alarm</mat-icon>Urgentes</button>
+      <button class="option-button" mat-button mat-raised-button (click)="getPrioritiesTask('moderate')"><mat-icon aria-hidden="false" aria-label="medium icon">autorenew</mat-icon>Moderadas</button>
+      <button class="option-button" mat-button mat-raised-button (click)="getPrioritiesTask('low')"><mat-icon aria-hidden="false" aria-label="medium icon">assignment_returned</mat-icon>Bajas</button>
+    </div>
+    <div class="home__card-list__container">
+      <mat-card class="card" *ngFor="let card of cardList">
+        <mat-card-header [ngClass]="{'card__header--urgent': card.priority === 'urgent', 'card__header--moderate': card.priority === 'moderate', 'card__header--low': card.priority === 'low'}">
+          <mat-card-title class="card-title">
+            <div class="card-title__icon">
               <mat-icon aria-hidden="false" aria-label="urgent icon" *ngIf="card.priority === 'urgent'">alarm</mat-icon>
               <mat-icon aria-hidden="false" aria-label="medium icon" *ngIf="card.priority === 'moderate'">autorenew</mat-icon>
               <mat-icon aria-hidden="false" aria-label="medium icon" *ngIf="card.priority === 'low'">assignment_returned</mat-icon>
@@ -17,7 +22,7 @@
           </mat-card-title>
           <mat-card-subtitle class="card__card-list__subtitle"><strong>Fecha de finalización:</strong> {{ card.date | date }}</mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content>
+        <mat-card-content class="card__content">
           <p class="card__card-list__description">
             {{card.description}}
           </p>
