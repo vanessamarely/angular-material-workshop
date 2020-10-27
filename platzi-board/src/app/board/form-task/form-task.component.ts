@@ -1,10 +1,11 @@
 import { Component, Input, NgZone, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CardSchema } from './../../core/models';
+import { CardSchema, ListSchema } from './../../core/models';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { CdkConnectedOverlay } from '@angular/cdk/overlay';
 import { take } from 'rxjs/operators';
-
+import { TasksService } from './../../core/services';
+import { generateUniqueId } from './../../shared/utils';
 @Component({
   selector: 'app-form-task',
   templateUrl: './form-task.component.html',
@@ -14,6 +15,7 @@ export class FormTaskComponent implements OnInit {
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
   @Input() connectedOverlay: CdkConnectedOverlay;
   @Input() card?: CardSchema;
+  @Input() list: ListSchema;
 
   addTask: FormGroup;
   selectedPriority: string;
@@ -24,7 +26,7 @@ export class FormTaskComponent implements OnInit {
     {value: 'low', viewValue: 'Bajo'}
   ];
 
-  constructor(private fb: FormBuilder, private _ngZone: NgZone) { }
+  constructor(private fb: FormBuilder, private _ngZone: NgZone, public tasksService: TasksService) { }
 
   ngOnInit(): void {
     this.setForm();
@@ -47,10 +49,17 @@ export class FormTaskComponent implements OnInit {
 
   onFormAdd(form: CardSchema): void {
     if (this.addTask.valid  && !this.card) {
-      console.log('creada');
+      form.id = generateUniqueId();
+      this.tasksService.addCard(form, this.list);
       this.close();
     } else {
-      console.log('editada');
+      const findPriority = this.priorities.find(element => form.priority === element.value);
+      form.id = this.card.id;
+      form.priority = !findPriority ? this.card.priority : form.priority;
+      form.date = !findPriority ? this.card.date : new Date(form.date);
+      if(form.priority) {
+        this.tasksService.updateTask(form, this.list);
+      }
       this.close();
     }
   }

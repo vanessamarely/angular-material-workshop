@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListSchema } from './../../core/models';
 import { ApiService } from './../../core/services';
-
+import { TasksService } from './../../core/services/tasks.service';
 
 @Component({
   selector: 'app-board',
@@ -11,10 +11,11 @@ import { ApiService } from './../../core/services';
 export class BoardComponent implements OnInit {
   lists: ListSchema[];
   
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private tasksService: TasksService) { }
 
   ngOnInit(): void {
-    this.getDataList();
+    // this.getDataList();
+    this.getDataStored();
   }
 
   getDataList(): void {
@@ -22,6 +23,14 @@ export class BoardComponent implements OnInit {
     this.apiService.getApi()
       .subscribe(
         response => this.lists = response['list'],
+        error => (console.log('Ups! we have an error: ', error))
+    );
+  }
+
+  getDataStored(): void {
+    this.tasksService.getBoardList$
+      .subscribe(
+        response => this.lists = response,
         error => (console.log('Ups! we have an error: ', error))
     );
   }

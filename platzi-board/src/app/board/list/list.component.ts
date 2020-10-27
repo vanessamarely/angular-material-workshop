@@ -10,6 +10,7 @@ import { CdkConnectedOverlay } from '@angular/cdk/overlay';
 })
 export class ListComponent implements OnInit {
   @Input() list: ListSchema;
+
   isOverlayDisplayed = false;
   readonly overlayOptions: Partial<CdkConnectedOverlay> = {
     hasBackdrop: true,

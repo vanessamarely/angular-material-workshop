@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'board',
     loadChildren: './board/board.module#BoardModule'
-  }
+  },
+  { 
+    path: '404', 
+    loadChildren: './not-found/not-found.module#NotFoundModule'
+  },
 ];
 
 @NgModule({

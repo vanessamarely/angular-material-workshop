@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CardSchema } from "./../../core/models";
+import { CardSchema, ListSchema } from "./../../core/models";
 import { CdkConnectedOverlay } from '@angular/cdk/overlay';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../../shared/components/modal/modal.component';
-
+import { TasksService } from './../../core/services';
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
@@ -11,6 +11,7 @@ import { ModalComponent } from '../../shared/components/modal/modal.component';
 })
 export class TaskComponent implements OnInit {
   @Input() card: CardSchema;
+  @Input() list?: ListSchema;
 
   isOverlayDisplayed = false;
   readonly overlayOptions: Partial<CdkConnectedOverlay> = {
@@ -20,7 +21,7 @@ export class TaskComponent implements OnInit {
     ]
   };
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, public tasksService: TasksService) { }
 
   ngOnInit(): void {
   }
@@ -36,7 +37,7 @@ export class TaskComponent implements OnInit {
   removeTask(cardId: string): void {
     const dialogRef = this.dialog.open(ModalComponent);
     dialogRef.afterClosed().subscribe(result => {
-      console.log('Eliminar tarea');
+      this.tasksService.removeTask(cardId, this.list);
     });
   }
 

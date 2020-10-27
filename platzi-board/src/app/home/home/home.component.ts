@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from './../../core/services';
+import { TasksService } from './../../core/services';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,16 +9,16 @@ import { ApiService } from './../../core/services';
 export class HomeComponent implements OnInit {
   cardList: any;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private tasksService: TasksService) { }
 
   ngOnInit(): void {
   }
   
   getPrioritiesTask(PriorityType: string): void {
-    this.apiService.getApi()
+    this.tasksService.getBoardList$
       .subscribe(
         response => {
-          const lists = response['list'];
+          const lists = response;
           let cards = [];
           lists.map(element => {
             element.cards.map(card => {

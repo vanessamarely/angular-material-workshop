@@ -10,6 +10,7 @@ import { CoreModule } from "./core/core.module";
 import { SharedModule } from "./shared/shared.module";
 import { BoardModule } from "./board/board.module";
 import { HomeModule } from "./home/home.module";
+import { NotFoundModule} from './not-found/not-found.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HomeModule } from "./home/home.module";
     BoardModule,
     HomeModule,
     HttpClientModule,
+    NotFoundModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
