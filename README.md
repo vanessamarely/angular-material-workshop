@@ -45,5 +45,7 @@ La aplicación la encontraras en el folder platzi-board 👍
 - [Router](routing.md)
 - [Schematics](schematics.md)
 - [Services](services.md)
+- [Reactive Forms](reactive-forms.md)
+- [Dynamic components](dynamic-components.md)
 - [Recomendaciones Generales](general.md)
 
