@@ -16,6 +16,14 @@ Ingeniera de Sistemas
 GDE en Angular, Github Star
 Me gusta ayudar en las comunidades, dar charlas, dar mentorías y compartir mi conocimiento. 
 
+## Instrucciones para leer este repositorio ℹ️
+- Este repositorio posee varias ramas, en la última rama 39-repaso encontraras la aplicación completa, al igual que en la rama llamada platzi-board.
+- En cada rama encontrarás los elementos que se irán incluyendo por clase (en el caso de que te pierdas puedes ir al repo respectivo de la clase para ver los cambios aplicados).
+- En la carpeta llamada platzi-board encontrarás la aplicación de Angular
+- El repositorio tiene varios archivos de lectura, para que puedas ver de forma general y a modo de repaso, algunos conceptos de Angular.
+
+Espero este repositorio te sea de mucha ayuda, para que juntos podamos crear esta gran aplicación de angular 👍
+
 ## Tabla de contenido
 
 - [Introduccion a CDK](cdk.md).
