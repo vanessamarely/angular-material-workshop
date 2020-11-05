@@ -8,6 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
  
 //CDK
@@ -25,6 +27,8 @@ import { TextFieldModule } from '@angular/cdk/text-field';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatTooltipModule,
     //cdk
     DragDropModule,
@@ -38,6 +42,8 @@ import { TextFieldModule } from '@angular/cdk/text-field';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatTooltipModule,
     //cdk
     DragDropModule,
