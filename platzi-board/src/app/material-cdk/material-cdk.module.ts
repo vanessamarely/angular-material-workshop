@@ -11,7 +11,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 //CDK
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -31,6 +32,8 @@ import { PortalModule } from '@angular/cdk/portal';
     MatTooltipModule,
     MatDialogModule,
     MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     //cdk
     DragDropModule,
     OverlayModule,
@@ -47,6 +50,8 @@ import { PortalModule } from '@angular/cdk/portal';
     MatTooltipModule,
     MatDialogModule,
     MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     //cdk
     DragDropModule,
     OverlayModule,

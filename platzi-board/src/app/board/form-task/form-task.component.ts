@@ -56,7 +56,7 @@ export class FormTaskComponent implements OnInit {
       const findPriority = this.priorities.find(element => form.priority === element.value);
       form.id = this.card.id;
       form.priority = !findPriority ? this.card.priority : form.priority;
-      form.date = !findPriority ? this.card.date : new Date(form.date);
+      form.date = new Date(form.date);
       if(form.priority) {
         this.tasksService.updateTask(form, this.list);
       }
