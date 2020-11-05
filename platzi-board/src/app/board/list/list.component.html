@@ -8,7 +8,7 @@
 	<h3 class="list__title"><strong>{{list.name}}</strong></h3>
 	<button [ngClass]="{'hidden': list.id !== '1'}" class="list__addButton" cdkOverlayOrigin (click)="displayOverlay()" #trigger="cdkOverlayOrigin" mat-raised-button color="primary">Añadir Tarea</button>
 	<div class="list__cards">
-		<app-task *ngFor="let card of list.cards" [card]="card" cdkDrag></app-task>
+		<app-task *ngFor="let card of list.cards" [card]="card" cdkDrag (editTask)="displayOverlay($event)"></app-task>
 	</div>
 </div>
 
@@ -22,5 +22,5 @@
 	(backdropClick)="hideOverlay()"
   (detach)="hideOverlay()"
 	>
-  <app-form-task [connectedOverlay]="connectedOverlay"></app-form-task>
+  <app-form-task [card]="card" [connectedOverlay]="connectedOverlay"></app-form-task>
 </ng-template>

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ListSchema } from "./../../core/models";
+import { CardSchema, ListSchema } from "./../../core/models";
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { CdkConnectedOverlay } from '@angular/cdk/overlay';
 
@@ -10,6 +10,7 @@ import { CdkConnectedOverlay } from '@angular/cdk/overlay';
 })
 export class ListComponent implements OnInit {
   @Input() list: ListSchema;
+  card: CardSchema;
   isOverlayDisplayed = false;
   readonly overlayOptions: Partial<CdkConnectedOverlay> = {
     hasBackdrop: true,
@@ -34,8 +35,18 @@ export class ListComponent implements OnInit {
     }
   }
 
-  displayOverlay(): void {
+  displayOverlay(event?: any): void {
     this.isOverlayDisplayed = true;
+    if(!!event){
+      this.card = {
+        date: event.date,
+        id: event.id,
+        description: event.description,
+        priority: event.priority
+      };
+    }else{
+      this.card = null;
+    }
   }
 
   hideOverlay(): void {

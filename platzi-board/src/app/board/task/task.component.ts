@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CardSchema } from "./../../core/models";
-import { CdkConnectedOverlay } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-task',
@@ -9,26 +8,15 @@ import { CdkConnectedOverlay } from '@angular/cdk/overlay';
 })
 export class TaskComponent implements OnInit {
   @Input() card: CardSchema;
-
-  isOverlayDisplayed = false;
-  readonly overlayOptions: Partial<CdkConnectedOverlay> = {
-    hasBackdrop: true,
-    positions: [
-      { originX: 'start', originY: 'top', overlayX: 'start',  overlayY: 'top'}
-    ]
-  };
+  @Output() editTask: EventEmitter<CardSchema> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  displayOverlay(): void {
-    this.isOverlayDisplayed = true;
-  }
-
-  hideOverlay(): void {
-    this.isOverlayDisplayed = false;
+  handleEditTask(card: CardSchema){
+    this.editTask.emit(card);
   }
 
 }
