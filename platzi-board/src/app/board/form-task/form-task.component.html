@@ -5,7 +5,9 @@
   <section> 
     <mat-form-field class="form__fields__item" appearance="fill">
       <mat-label>Fecha</mat-label>
-      <input type="date"  matInput placeholder="Fecha" value="" formControlName="priority">
+      <input matInput placeholder="Fecha" formControlName="date" [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
